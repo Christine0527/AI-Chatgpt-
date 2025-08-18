@@ -15,7 +15,7 @@ def verify_line_signature(body: bytes, signature: str) -> bool:
 @app.get("/")
 def read_root():
     return {"ok": True}
-    @app.head("/")
+@app.head("/")
 def head_root():
     # 回 200，讓用 HEAD 的監控不會報錯
     return Response(status_code=200)
